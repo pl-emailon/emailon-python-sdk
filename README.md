@@ -14,19 +14,20 @@ Then follow the instructions from `examples/api_config.py` file.
 2. https://packaging.python.org/tutorials/installing-packages/#creating-virtual-environments  
 
 ### Example config
-from emailon.base import Base
-from emailon.config import Config
 
-def setup():
-    # configuration api object
-    config = Config({
-        'api_url': 'https://system.emailon.pl/api',
-        'public_key': 'XX',
-        'private_key': 'XX',
-        'charset': 'utf-8'
-    })
+    from emailon.base import Base
+    from emailon.config import Config
 
-    # now inject the configuration and we are ready to make api calls
+    def setup():
+        # configuration api object
+        config = Config({
+            'api_url': 'https://system.emailon.pl/api',
+            'public_key': 'XX',
+            'private_key': 'XX',
+            'charset': 'utf-8'
+        })
+
+    # now you can inject the configuration and you can make api calls
     Base.set_config(config)
-
+    
 ### Please make sure you have all needed files at the main directory of your project (setup_api.py)
