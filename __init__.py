@@ -1,0 +1,1 @@
+name = 'Emailon Python SDK'
